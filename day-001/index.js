@@ -1,6 +1,6 @@
-const fs = require('fs');
-const path = require('path');
-const input = fs.readFileSync(path.join(__dirname, 'input.txt'), 'utf8');
+const Utils = require('../utils');
+
+const input = Utils.getInput('day-001/input.txt');
 
 const elvesCalories = input.split("\n\n");
 
@@ -23,3 +23,5 @@ elves.sort((a, b) => b - a);
 
 let topThree = elves.slice(0, 3);
 let total = topThree.reduce((a, b) => a + b, 0);
+
+console.log('Total calories: ' + total);
