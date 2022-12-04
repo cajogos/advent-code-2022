@@ -16,6 +16,10 @@ elvesCalories.forEach(elfCalories =>
         totalCalories += parseInt(calorie);
     });
     elves.push(totalCalories);
+    if (totalCalories > maxCalories)
+    {
+        maxCalories = totalCalories;
+    }
 });
 
 // sort array in descending order
